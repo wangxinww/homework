@@ -1,0 +1,71 @@
+@-webkit-keyframes man-action {
+	0% {
+		-webkit-transform: rotate(5deg) translate( 5px, 0px);
+	}
+	25% {
+		-webkit-transform: rotate(5deg) translate(-5px, -14px);
+	}
+	50% {
+		-webkit-transform: rotate(5deg) translate( 5px, 0px);
+	}
+	75% {
+		-webkit-transform: rotate(5deg) translate(-5px, -14px);
+	}
+	100% {
+		-webkit-transform: rotate(5deg) translate( 5px, 0px);
+	}
+}
+
+/*
+ 右手臂（26 ~ -20  ~ 26 ) ，  右小手臂（-10 ~ -45  ~ -10）
+ * */
+@-webkit-keyframes right-bicep-action{
+	from{
+		-webkit-transform: rotate(26deg);
+	}
+	50%{
+		-webkit-transform: rotate(-20deg);
+	}
+	to{
+		-webkit-transform: rotate(26deg);
+	}
+}
+
+@-webkit-keyframes right-forearm-action{
+	from{
+		-webkit-transform: rotate(-10deg);
+	}
+	50%{
+		-webkit-transform: rotate(-45deg);
+	}
+	to{
+		-webkit-transform: rotate(-10deg);
+	}
+}
+
+/*
+ 左手臂（-20 ~ 26  ~ -20 )，左小手臂（-45 ~ -10  ~ -45）
+ * */
+@-webkit-keyframes left-bicep-action{
+	from{
+		-webkit-transform: rotate(-20deg);
+	}
+	50%{
+		-webkit-transform: rotate(26deg);
+	}
+	to{
+		-webkit-transform: rotate(-20deg);
+	}
+}
+
+@-webkit-keyframes left-forearm-action{
+	from{
+		-webkit-transform: rotate(-45deg);
+	}
+	50%{
+		-webkit-transform: rotate(-10deg);
+	}
+	to{
+		-webkit-transform: rotate(-45deg);
+	}
+}
