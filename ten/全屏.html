@@ -1,10 +1,495 @@
 <!DOCTYPE html>
 <html>
+	<!--
+	https://github.com/alvarotrigo/fullPage.js
+-->
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="css/jquery.fullpage.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/jquery.fullpage.js"></script>
+		<style type="text/css">
+			#fullpage .section:nth-child(1) {
+				background-image: url(img/1.jpg);
+			}
+			
+			#fullpage .section:nth-child(2) {
+				background-image: url(img/2.jpg);
+			}
+			
+			#fullpage .section:nth-child(3) {
+				background-image: url(img/3.jpg);
+			}
+			
+			#fullpage .section:nth-child(4) {
+				background-image: url(img/4.jpg);
+			}
+			
+			#fullpage .section:nth-child(5) {
+				background-image:url(img/2.jpg);
+			}
+			
+			#menu {
+				width: 90px;
+				height: 270px;
+				position: fixed;
+				right: 80px;
+				top: 350px;
+				list-style-type: none;
+				z-index: 999;
+			}
+			
+			#menu li {
+				width: 90px;
+				height: 40px;
+				margin-bottom: 10px;
+				float: left;
+				margin: 10px 0 0 0;
+				font-size: 16px;
+								
+			}
+			
+			#menu a {
+				float: left;
+				width: 90px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				background-color: #0074EA;
+				color: #FFFFFF;
+			    text-decoration: none;
+			}
+			
+			#menu .active a {
+				color: #fff;
+				background-color: #fff;
+				color: #0074EA;
+				
+			}
+			
+			.section {
+				text-align: center;
+				font: 50px "Microsoft Yahei";
+				color: #fff;
+			}
+			/*i1*/
+			.i1{
+				width: 180px;
+				height: 400px;
+				font-size: 16px;
+				position: relative;
+				position: fixed;
+				top: -400px;
+				left:200px ;
+				
+				
+			}
+			
+			.i1 ul{
+				width: 180px;
+				height: 200px;
+				list-style-type: none;
+				margin-bottom: 20px;
+			}
+			.i1 ul li{
+				margin: 0;
+				padding: 0;
+				width: 180px;
+				height: 22px;
+			}	
+			.i1 ul li strong{
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				left: -5px;
+				width: 35px;
+				height: 22px;
+				float: left;
+				background-color: #0074EA;
+				border-radius: 10px;
+			}
+			
+			.i1 ul li p{
+			    color: #FFFFFF;
+				
+			}
+			.i1 .big{
+				width: 180px;
+				height: 40px;
+			}
+			.i1 .big p{
+				font-size: 40px;
+				
+			}
+			.i1 .big strong{
+				margin-top: 5px;
+			}
+			.i1 img{
+				width: 180px;
+				height: 180px;
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+			}
+			/*i2*/
+			.left{
+				float: left;
+			}
+			.right{
+				float: right;
+			}
+			.clear{
+				clear: both;
+			}
+			.i2{
+				width: 540px;
+				height: 320px;
+				font-size: 16px;
+				position: relative;
+				position: fixed;
+				top: ;
+				left:-600px ;
+				
+			}
+			.i2 ul{
+				width: 180px;
+				height: 320px;
+				list-style-type: none;
+				margin-top: 100px;
+			}
+			.i2 ul li{
+				margin: 0;
+				padding: 0;
+				width: 180px;
+				height: 22px;
+			}	
+			.i2 ul li strong{
+				margin: 0;
+				padding: 0;
+				/*position: absolute;
+				left: -5px;*/
+				width: 35px;
+				height: 22px;
+				float: left;
+				background-color: #0074EA;
+				border-radius: 10px;
+			}
+			
+			.i2 ul li p{
+			    color: #FFFFFF;
+				
+			}
+			.i2 .big{
+				width: 180px;
+				height: 40px;
+			}
+			.i2 .big p{
+				font-size: 40px;
+				
+			}
+			.i2 .big strong{
+				margin-top: 5px;
+			}
+			.i2 img{
+				width: 315px;
+				height: 320px;
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+			}
+			/*i3*/
+			.i3{
+				width:600px;
+				height: 300px;
+				font-size: 16px;
+				position: relative;
+				position: fixed;
+				right: -600PX;
+				
+				
+				
+			}
+			.i3 ul{
+				width: 200px;
+				height: 200px;
+				list-style-type: none;
+				margin-top: 50px;
+			}
+			.i3 ul li{
+				clear: both;
+				width: 200px;
+				height: 22px;
+			}	
+			.i3 ul li strong{
+				
+				width: 35px;
+				height: 22px;
+				float: left;
+				background-color: #0074EA;
+				border-radius: 10px;
+			}
+			
+			.i3 ul li p{
+				margin-top: -5PX;
+				float: right;
+			    color: #FFFFFF;
+				
+			}
+			.i3 .big{
+				width: 180px;
+				height: 40px;
+			}
+			.i3 .big p{
+				font-size: 40px;
+				
+			}
+			.i3 .big strong{
+				margin-top: 5px;
+			}
+			.i3 img{
+				width: 315px;
+				height: 250px;
+				
+				
+			}
+			/*i4*/
+			.i4{
+				width: 180px;
+				height: 400px;
+				font-size: 16px;
+				position: relative;
+				position: fixed;
+				top: -400px;
+				left:500PX ;
+				
+			}
+			.i4 ul{
+				width: 180px;
+				height: 200px;
+				list-style-type: none;
+				margin-bottom: 20px;
+			}
+			.i4 ul li{
+				margin: 0;
+				padding: 0;
+				width: 180px;
+				height: 22px;
+			}	
+			.i4 ul li strong{
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				left: -5px;
+				width: 35px;
+				height: 22px;
+				float: left;
+				background-color: #0074EA;
+				border-radius: 10px;
+			}
+			
+			.i4 ul li p{
+			    color: #FFFFFF;
+				
+			}
+			.i4 .big{
+				width: 180px;
+				height: 40px;
+			}
+			.i4 .big p{
+				font-size: 40px;
+				
+			}
+			.i4 .big strong{
+				margin-top: 5px;
+			}
+			.i4 img{
+				width: 180px;
+				height: 180px;
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+			}
+		</style>
 	</head>
+
 	<body>
-		
+		<ul id="menu">
+			<li data-menuanchor="p1" class="active">
+				<a href="#p1">TOP</a>
+			</li>
+			<li data-menuanchor="p2">
+				<a href="#p2">科技卷</a>
+			</li>
+			<li data-menuanchor="p3">
+				<a href="#p3">人物卷</a>
+			</li>
+			<li data-menuanchor="p4">
+				<a href="#p4">社会卷</a>
+			</li>
+			<li data-menuanchor="p5">
+				<a href="#p5">网络卷</a>
+			</li>
+		</ul>
+
+		<div id="fullpage">
+			<div class="section">
+				<div class="i1">
+					<ul>
+						<li><strong>1月</strong><p>网络机顶盒</p></li>
+						<li><strong>2月</strong><p>干细胞人造肉</p></li>
+						<li><strong>2月</strong><p>3D涂鸦笔</p></li>
+						<li class="big"><strong>3月</strong><p >H7N9</p></li>
+					</ul>
+					<img src="img/h7n9.jpg"  />
+				</div>
+				<div class="i2 clear">
+					<img src="img/shenshi.png" class="left" />
+					<ul class="right">
+						<li><strong>1月</strong><p>网络机顶盒</p></li>
+						<li><strong>2月</strong><p>干细胞人造肉</p></li>
+						<li><strong>2月</strong><p>3D涂鸦笔</p></li>
+						<li class="big"><strong>3月</strong><p >H7N9</p></li>
+					</ul>
+					
+				</div>
+				<div class="i3 clear">
+
+					<ul class="left clear">
+						<li><p>网络机顶盒</p><strong>1月</strong></li>
+						<li><p>干细胞人造肉</p><strong>2月</strong></li>
+						<li><p>3D涂鸦笔</p><strong>2月</strong></li>
+						<li class="big"><p >H7N9</p><strong>3月</strong></li>
+					</ul>
+					<img src="img/zhuangbei.jpg" class="right" />
+					
+				</div>
+				<div class="i4">
+					<ul>
+						<li><strong>1月</strong><p>网络机顶盒</p></li>
+						<li><strong>2月</strong><p>干细胞人造肉</p></li>
+						<li><strong>2月</strong><p>3D涂鸦笔</p></li>
+						<li class="big"><strong>3月</strong><p >H7N9</p></li>
+					</ul>
+					<img src="img/h7n9.jpg"  />
+				</div>
+			</div>
+
+			<div class="section">
+				
+			</div>
+
+			<div class="section"></div>
+
+			<div class="section"></div>
+
+			<div class="section">
+
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					//Navigation
+					menu: '#menu',
+					lockAnchors: false,
+					/** 锚点**/
+					anchors: ['p1', 'p2', 'p3', 'p4', 'p5'],
+					/**导航*/
+					navigation: false,
+					/*导航位置*/
+					navigationPosition: 'right',
+					/*导航提示文字*/
+					navigationTooltips: ['第一页', '第二页', '第三页', '第四页', '第五页'],
+					/*是否显示当前section的提示文字*/
+					showActiveTooltip: false,
+					/*左右滑动导航是否线是否*/
+					slidesNavigation: true,
+					/**左右滑动导航的位置*/
+					slidesNavPosition: 'top',
+
+					//Scrolling
+					css3: true,
+					scrollingSpeed: 700,
+					autoScrolling: true,
+					fitToSection: true,
+					fitToSectionDelay: 1000,
+					scrollBar: false,
+					easing: 'easeInOutCubic',
+					easingcss3: 'ease',
+
+					loopBottom: false,
+					loopTop: false,
+
+					loopHorizontal: true,
+					// 上下循环
+					continuousVertical: true,
+					continuousHorizontal: false,
+					scrollHorizontally: false,
+					interlockedSlides: false,
+					dragAndMove: false,
+					offsetSections: false,
+					resetSliders: false,
+					fadingEffect: false,
+					normalScrollElements: '#element1, .element2',
+					scrollOverflow: false,
+					scrollOverflowReset: false,
+					scrollOverflowOptions: null,
+					touchSensitivity: 15,
+					normalScrollElementTouchThreshold: 5,
+					bigSectionsDestination: null,
+
+					//Accessibility
+					keyboardScrolling: true,
+					animateAnchor: true,
+					recordHistory: true,
+
+					//Design
+					controlArrows: true,
+					verticalCentered: true,
+					//					sectionsColor: ['red', 'green','blue','yellow','pink'],
+					paddingTop: '3em',
+					paddingBottom: '10px',
+					fixedElements: '#header, .footer',
+					responsiveWidth: 0,
+					responsiveHeight: 0,
+					responsiveSlides: false,
+					parallax: false,
+					parallaxOptions: {
+						type: 'reveal',
+						percentage: 62,
+						property: 'translate'
+					},
+
+					//Custom selectors
+					sectionSelector: '.section',
+					slideSelector: '.slide',
+
+					lazyLoading: true,
+
+					//events
+					onLeave: function(index, nextIndex, direction) {
+						$("i1")
+					},
+					afterLoad: function(anchorLink, index) {
+						
+					},
+					afterRender: function() {},
+					afterResize: function() {},
+					afterResponsive: function(isResponsive) {},
+					afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {},
+					onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {}
+				});
+			});
+
+			setInterval(function() {
+
+				$.fn.fullpage.moveSectionDown();
+
+			}, 10000);
+
+		</script>
 	</body>
+
 </html>
